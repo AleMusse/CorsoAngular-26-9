@@ -1,6 +1,4 @@
 
-
-
 fetch("http://localhost:3001/games")
   .then((response) => response.json())
   .then((data) => {
@@ -28,12 +26,11 @@ fetch("http://localhost:3001/games")
       `;
 
 
-
       gameContainer.appendChild(gameCard);
 
-      const btn = gameCard.querySelector(".btn--view-more");
-      btn.addEventListener("click", function() {
-        const clickedGame = game;
+      const viewMoreButton = gameCard.querySelector(".btn--view-more");
+      viewMoreButton.addEventListener("click", function() {
+        const clickedGame = game; 
 
         const modal = document.querySelector(".modal");
         modal.innerHTML = `
